@@ -1,0 +1,29 @@
+{
+  "name": "react-practise",
+  "version": "1.0.0",
+  "description": "practise for react from tutorial",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ananya-Mohapatr/react-practise.git"
+  },
+  "author": "Ananya Mohapatra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ananya-Mohapatr/react-practise/issues"
+  },
+  "homepage": "https://github.com/Ananya-Mohapatr/react-practise#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browsersList" :[
+    "last 10 versions"   
+  ]
+}
