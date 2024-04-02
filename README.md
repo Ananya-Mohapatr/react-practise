@@ -1,3 +1,7 @@
+# React uses Reconciliation Algorithm(React Fiber)
+- Suppose there is a res-container that has 7 restaurant cards.If UI changes to filtering 3 filtered cards.React creates virtual Dom
+
+# React is highly efficient as it has efficient Virtual DOm which efficiently manipulates DOM (refer- https://github.com/acdlite/react-fiber-architecture)
 # This code uses Parcel as Bundler.
 
 # Parcel usage
@@ -33,4 +37,8 @@
 
 # IMP JSX property
 - We obviously will intend to inject data within {} to render within jsx. But if we try to add any malicious data to render within curly brance,jsx will not render it.
+
+# when we are using {} , it is named import,used for importing multiple values import
+
+
 

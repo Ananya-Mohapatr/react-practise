@@ -1,4 +1,5 @@
 import React from 'react'
+import { CDN_URL } from '../utils/constants'
 const styleCard = {
     backgroundColor:"#f0f0f0"
 }
@@ -7,7 +8,7 @@ const ResCardComponent = ({resData}) =>{
 
     return(
         <div className="res-card" style={styleCard}>
-            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ cloudinaryImageId}
+            <img src={CDN_URL+ cloudinaryImageId}
             className="res-logo"
             alt='res-logo'/>
             <h4>{name}</h4>

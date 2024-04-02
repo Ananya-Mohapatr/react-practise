@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-import resObj from "./restaurantData";
-import Header from "./Components/Header";
-import Body from "./Components/Body";
+import Header from './Components/Header'
+import Body from "./Components/Body";  //this is default import 
 
 const AppLayout = () =>{
 return (
