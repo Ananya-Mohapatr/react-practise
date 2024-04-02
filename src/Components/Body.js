@@ -1,6 +1,6 @@
 import React from 'react'
 import ResCardComponent from '../Modal/ResCardComponent'
-import resObj from '../../restaurantData'
+import resObj from '../restaurantData'
 
 const Body = () =>{
   return(
