@@ -1,8 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-const heading1 = React.createElement("div", {id:"parent"},
-React.createElement("div", {id:"child"} ,
-[React.createElement("h1", {} ,"Hello from lalu1"),React.createElement("h2", {} ,"Hello from Anku")]
-))
-const root1 = ReactDOM.createRoot(document.getElementById("root"));
-root1.render(heading1);
+import resObj from "./restaurantData";
+import Header from "./src/Components/Header";
+import Body from "./src/Components/Body";
+
+const AppLayout = () =>{
+return (
+    <div className="app">
+        <Header/>
+        <Body/>
+    </div>
+)
+}
+const root2 = ReactDOM.createRoot(document.getElementById("root"));
+root2.render(<AppLayout/>)

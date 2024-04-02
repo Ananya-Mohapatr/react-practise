@@ -1,4 +1,4 @@
-# This code uses Parcel as Bundling.
+# This code uses Parcel as Bundler.
 
 # Parcel usage
 - Dev Build
@@ -28,4 +28,9 @@
 
 # What is the use of browserlist that i defined in Package.json
 - It consists of brosers with which our application will be compartible.It is dependent on project requirement and compartibility.
+
+ # Babel transpiles jsx to react.create element and it further converts to js object which then converts to html element that then renders in browser.Babel is managed by our bundler.
+
+# IMP JSX property
+- We obviously will intend to inject data within {} to render within jsx. But if we try to add any malicious data to render within curly brance,jsx will not render it.
 
