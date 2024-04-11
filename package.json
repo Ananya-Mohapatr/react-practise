@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "practise for react from tutorial",
   "scripts": {
-    "start" :"parcel src/index.html",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "test": "jest"
   },
@@ -22,10 +22,14 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "-": "^0.0.1",
+    "axios": "^1.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "save-dev": "^0.0.1-security"
   },
-  "browsersList" :[
-    "last 10 versions"   
+  "browsersList": [
+    "last 10 versions"
   ]
 }

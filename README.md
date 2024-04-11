@@ -40,5 +40,9 @@
 
 # when we are using {} , it is named import,used for importing multiple values import
 
+# Routing is of 2 types-
+- Server side routing (Suppose u clicked on About US in headers,so route will render the About us page and calls the api of that page and renders data without reloading the page).
+-  Client side routing (SPA)
+
 
 
