@@ -28,7 +28,7 @@ export default class UserClass extends React.Component{
     }
 
     componentWillUnmount(){
-        console.log("-----COMPONENT WILL UNMOUNT------")
+        console.log("-----COMPONENT WILL------")
     }
     render(){
         console.log("childRender")

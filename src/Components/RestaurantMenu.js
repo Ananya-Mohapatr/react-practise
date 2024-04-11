@@ -1,18 +1,21 @@
 import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import Shimmer from './Shimmer'
+import useRestaurantMenu from '../utils/useRestaurantMenu'
 export default RestaurantMenu = () =>{
-    const [resInfo,setResInfo] = useState(null)
+    // const [resInfo,setResInfo] = useState(null)
     const {resId} = useParams()
-    useEffect(()=>{
-   fetchMenu()
-    },[])
-    const fetchMenu = async() =>{
-        const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.909674&lng=77.6393447&restaurantId=${resId}&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER`) 
-        const res = await data.json()
-        setResInfo(res)
-        console.log("data",res)
-    }
+    const resInfo = useRestaurantMenu(resId)
+    //We moved the below code snippet to a custom hook - useRestaurantMenu
+//     useEffect(()=>{
+//    fetchMenu()
+//     },[])
+    // const fetchMenu = async() =>{
+    //     const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.909674&lng=77.6393447&restaurantId=${resId}&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER`) 
+    //     const res = await data.json()
+    //     setResInfo(res)
+    //     console.log("data",res)
+    // }
     const {name,cuisines,costForTwo } = resInfo?.data?.cards[2]?.card?.card?.info || {};
     var listMenu = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || []
 

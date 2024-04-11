@@ -1,16 +1,19 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client"
 import Header from './Components/Header'
 import Body from "./Components/Body";  //this is default import 
 import {createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom'
-import About from "./Components/About";
 import Contact from './Components/Contact'
 import Errors from './Components/Error'
 import RestaurantMenu from "./Components/RestaurantMenu";
-
+// import Grocery from "./Components/Grocery";
+const Grocery = lazy(() => import ('./Components/Grocery'))
+const About = lazy(()=> import ('./Components/About'))
 const AppLayout = () =>{
+   //code splitting / lazy loading/dynamic bundling / chunking
 return (
     <div className="app">
+          
         <Header/>
         <Outlet/>
     </div>
@@ -29,7 +32,9 @@ const appRouter = createBrowserRouter([
             },
             {
                 path : '/about',
-                element : <About/>
+                element : <Suspense
+                           fallback = {<h1>Loading ....</h1>}>
+                            <About/></Suspense>
             },
             {
                 path:'/contact',
@@ -38,6 +43,13 @@ const appRouter = createBrowserRouter([
             {
                 path:'/restaurant/:resId',
                 element : <RestaurantMenu/>
+            },
+            {
+                path:'/grocery',
+                //FallBack will show the data when we dont have the response in suspense while the page gets loaded
+                element : <Suspense fallback={<h1>Loadin.....</h1>}>  
+                    <Grocery/>
+                </Suspense>
             }
         ],
         errorElement:<Errors/>

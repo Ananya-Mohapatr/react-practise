@@ -3,6 +3,7 @@ import ResCardComponent from '../Modal/ResCardComponent'
 import { resObj } from '../utils/RestaurantList'
 import Shimmer from './Shimmer'
 import { Link } from 'react-router-dom'
+import UseOnlineStatus from '../utils/UseOnlineStatus'
 
 const Body = () =>{
     const [listOfRestaurants,setListOfRestaurants] = useState([]) //array destructuring
@@ -46,6 +47,10 @@ const Body = () =>{
     setFilteredRest(listOfRestaurants.filter(i=>i.name.toLowerCase().includes(searchText.toLowerCase())))
 
   }
+  const isOnline = UseOnlineStatus()
+   
+  if(!isOnline)
+  return(<h1>Seems like you are offline</h1>);
     return (
       <div className="body">
           <div className="filter">
