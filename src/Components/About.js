@@ -5,11 +5,12 @@ export default class  About extends React.Component {
     constructor(props){
         super(props)
         console.log("parentConstructor")
-
+        
 
     }
-    componentDidMount(){
+     async componentDidMount(){
       console.log("parentComponent DidMount")
+      
     }
     render(){
         console.log("parentComponent render")
@@ -17,8 +18,7 @@ export default class  About extends React.Component {
         <div>
             <h1>About US</h1>
             <UserClass
-            name='Ananya'
-            location='Bengaluru'/>
+            />
            <Contact/></div>
     )
     }
