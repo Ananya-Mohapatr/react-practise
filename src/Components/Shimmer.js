@@ -2,12 +2,17 @@ import React from "react";
 
 export default  Shimmer = () =>{
     return (
-        <div className="shimmer-container">
-        <div className="shimmer-card">Card</div>
-        <div className="shimmer-card">Card</div>
-        <div className="shimmer-card">Card</div>
-        <div className="shimmer-card">Card</div>
-
+        <div className="flex flex-wrap">
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
+        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200"></div>
         </div>
     )
 }

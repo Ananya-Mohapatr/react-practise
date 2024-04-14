@@ -1,4 +1,5 @@
 import React ,{Component} from 'react'
+// import UserContext from '../utils/UserContext'
 
 export default class UserClass extends React.Component{
     constructor(props){
@@ -34,6 +35,10 @@ export default class UserClass extends React.Component{
         console.log("childRender")
         const {name, location, avatar_url} = this.state.userInfo
         return(
+            <div>
+                {/* <UserContext.Consumer>
+                {(data)=>console.log("dataa",data)}
+            </UserContext.Consumer> */}
             <div className='user-card'>
             {/* <h1>Count : {this.state.count}</h1>
             <button onClick={()=>{
@@ -41,10 +46,12 @@ export default class UserClass extends React.Component{
                     count:this.state.count+1
                 })
             }}>Count</button> */}
+            
             <h1>Name : {name}</h1>
             <h3>Location :{location} </h3>
             <img src={avatar_url}></img>
             <h3>Hubby : Ankit</h3>
+        </div>
         </div>
         )
     }

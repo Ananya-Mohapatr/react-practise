@@ -1,9 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* 
 .header {
     display: flex;
     justify-content: space-between;
     border:1px solid black;
-    /* background-color:green */
 }
 .logo{
  width: 150px;
@@ -29,10 +32,7 @@
     border:1px solid black
 }
 .res-card:hover{
-    /* cursor:pointer;
-    border:none; */
     transition:transform .5s ease-out
-    /* transform: scale(1.2); */
 }
 .search{
     padding:10px
@@ -75,4 +75,4 @@
 .user-card{
     padding:10px;
     border: 1px solid black
-}
+} */

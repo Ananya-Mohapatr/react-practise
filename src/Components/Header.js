@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext} from 'react'
 import { LOGO_URl } from '../utils/constants'
 import {Link} from 'react-router-dom'
 import UseOnlineStatus from '../utils/UseOnlineStatus'
+import UserContext from '../utils/UserContext'
 
 const Header = () =>{
     const [buttonName,setButtonname] = useState('Login')
     const onlineStatus = UseOnlineStatus()
+    const data = useContext(UserContext)
     return (
-        <div className="header">
-            <div className="logo-container">
-                <img className = 'logo' src = {LOGO_URl}/>
+        <div className="flex justify-between bg-gray-50 px-5 items-center shadow-lg">
+            <div className="p-2">
+                <img className = 'w-20 rounded-full shadow-lg' src = {LOGO_URl}/>
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Online status : {onlineStatus ? '🟢' : '🔴'}</li>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about'>About Us</Link></li>
-                    <li><Link to='/contact' >Contact us</Link></li>
-                    <li><Link to='/grocery' >Grocery</Link></li>
-                    <li>Cart</li>
-                    <button className='login-btn' onClick={()=>buttonName == 'Login' ? setButtonname('LogOut') : setButtonname('Login')}>{buttonName}</button>
+            <div className="flex">
+                <ul className = 'flex p-4 m-4 '>
+                    <li className='px-4  m-2 '>Online status : {onlineStatus ? '🟢' : '🔴'}</li>
+                    <li className='px-5 py-1 m-2 bg-green-100 rounded-lg shadow-md'><Link to='/'>Home</Link></li>
+                    <li className='px-5 py-1 m-2 bg-green-100 rounded-lg shadow-md'><Link to='/about'>About Us</Link></li>
+                    <li className='px-5 py-1 m-2 bg-green-100 rounded-lg shadow-md'><Link to='/contact' >Contact us</Link></li>
+                    <li className='px-5 py-1 m-2 bg-green-100 rounded-lg shadow-md'><Link to='/grocery' >Grocery</Link></li>
+                    <li className='px-5 py-1 m-2 bg-green-100 rounded-lg shadow-md'>Cart </li>
+                    <li className='px-5 py-1 m-2 bg-green-100 rounded-lg shadow-md'>🧑‍💻 {data.loggedInUser} </li>
+                    {/* <button className='login-btn' onClick={()=>buttonName == 'Login' ? setButtonname('LogOut') : setButtonname('Login')}>{buttonName}</button> */}
     
                 </ul>
             </div>

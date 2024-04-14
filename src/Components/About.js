@@ -1,6 +1,7 @@
 import React from 'react'
 import UserClass from './UserClass'
 import Contact from './Contact'
+import UserContext from '../utils/UserContext'
 export default class  About extends React.Component {
     constructor(props){
         super(props)
@@ -17,6 +18,9 @@ export default class  About extends React.Component {
     return (
         <div>
             <h1>About US</h1>
+            <UserContext.Consumer>
+            {(data)=><h1>Logged In User : {data.loggedInUser}</h1>}  
+            </UserContext.Consumer>
             <UserClass
             />
            <Contact/></div>
