@@ -28,7 +28,7 @@ const Body = () =>{
   const  fetchData =async () =>{
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.890818230949936&lng=77.6206533958726&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json()
-    console.log("json",json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+    // console.log("json",json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
     let arr = []
      
     // setListOfRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
@@ -36,7 +36,6 @@ const Body = () =>{
       arr.push(i.info)
 
     })
-    console.log("info",arr)
     setListOfRestaurants(arr)
     setFilteredRest(arr)
   }
@@ -57,7 +56,7 @@ const Body = () =>{
       <div className="body">
           <div className="filter flex justify-between">
             <div className='search m-4 p-4'>
-              <input type='text' className="ml-10 border border-solid border-black rounded-lg shadow-md" value={searchText} onChange={(e)=>setSearchText(e.target.value)}></input>
+              <input type='text' data-testid='searchId' className="ml-10 border border-solid border-black rounded-lg shadow-md" value={searchText} onChange={(e)=>setSearchText(e.target.value)}></input>
               <button className=' px-5 ml-4 py-1 bg-green-100 rounded-lg shadow-md' onClick={search} >Search</button>
 
             </div>

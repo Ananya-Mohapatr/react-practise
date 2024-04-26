@@ -9,7 +9,7 @@ const ResCardComponent = ({resData}) =>{
     const  {name,cuisines,avgRating,sla,costForTwo,cloudinaryImageId} = resData
     const {loggedInUser} = useContext(UserContext)
     return(
-        <div className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200" >
+        <div data-testid='resCard' className="m-4 p-4 w-[250px] h-[350px] rounded-lg bg-gray-50 hover:bg-gray-200" >
             <img src={CDN_URL+ cloudinaryImageId}
             className="h-[200px] w-[200px] rounded-lg ml-2"
             alt='res-logo'/>
@@ -29,7 +29,6 @@ export const withpromotedLabel = (ResCardComponent) =>{     //this is a higher o
 
 
     return(props)=>{
-        console.log("propsss",props)
         return(
             <div>
             <label className='absolute bg-black text-white rounded-md p-2 m-2'>Promoted</label>

@@ -6,7 +6,7 @@ export default class  About extends React.Component {
     constructor(props){
         super(props)
         console.log("parentConstructor")
-        
+
 
     }
      async componentDidMount(){
