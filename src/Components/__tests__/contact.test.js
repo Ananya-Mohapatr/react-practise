@@ -7,14 +7,14 @@ describe("Contact Us Page Test Cases" , ()=>{      //describe is used to group t
 
 
 //to test my heading Contact Us is loaded or not
-test('should load contact us component', () =>{
+it('should load contact us component', () =>{
     render (<Contact/>)
     const heading = screen.getByRole("heading")
     expect(heading).toBeInTheDocument()
 })
 
 // to test my button is loaded or not by finding button
-test('should load button inside contact component', () =>{
+it('should load button inside contact component', () =>{
     render (<Contact/>)
     const button = screen.getByRole("button")
     expect(button).toBeInTheDocument()
